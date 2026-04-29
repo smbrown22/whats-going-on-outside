@@ -17,8 +17,8 @@ We used JavaFX for the application's design and usage, to display graphs, curren
 
 **Observer**: Changes to the application happen when Weather/Time looks different. If the location you're viewing is during night, the weather app changes, to create a darker look for the display. If the weather is particularly rainy or snowy, the website will respond to the weather change. 
 
-**Strategy**: 
+**Strategy**: Swaps algorithms and display patterns depending on the weather. 
 
-Limitations: WeatherAPI limits you to a certain amount of requests and data based on your plan. 
+Limitations: WeatherAPI limits you to a certain amount of requests and data based on your plan. Data will only display a 5 day period, and potentially the weather. Data is extremely minimalist due to this limitation. 
 
 AI was used to create the GUI interface based on human-created mockup images of the application. All other work was created by humans. 
