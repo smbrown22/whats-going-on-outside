@@ -1,6 +1,6 @@
 import java.net.URL;
 import java.util.Scanner;
-
+import org.json.JSONObject;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,18 +20,22 @@ public class Main {
             Scanner urlScanner = new Scanner(url.openStream());
 
             StringBuilder jsonData = new StringBuilder();
-
             while (urlScanner.hasNext()) {
                 jsonData.append(urlScanner.nextLine());
             }
 
             urlScanner.close();
 
-            System.out.println("Weather Data: ");
+            JSONObject json = new JSONObject(jsonData.toString());
 
-            System.out.println(jsonData.toString());
+            double currentTemperature = json.getJSONObject("current").getDouble("temp_f");
+            String currentWeather = json.getJSONObject("current").getJSONObject("condition").getString("text");
+            String currentTime = json.getJSONObject("current").getString("last_updated");
 
-            System.out.println();
+            System.out.println("Current temperature in " + city + ": " + currentTemperature);
+            System.out.println("Current forecast in " + city + ": " + currentWeather);
+            System.out.println("Current forecast in " + city + ": " + currentWeather);
+
 
         } catch (Exception ex) {
 
