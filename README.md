@@ -20,3 +20,9 @@ We used JavaFX for the application's design and usage, to display graphs, curren
 **Limitations**: WeatherAPI limits you to a certain amount of requests and data based on your plan. Data will only display a 5 day period, and potentially the weather. Data is extremely minimalist due to this limitation.
 
 AI was used to create the GUI interface based on human-created mockup images of the application. All other work was created by humans.
+
+
+PLEASE make sure you have 
+- Java FX SDK 21
+- Java 21
+- And have a runnable VM to use the project 
